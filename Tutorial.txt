@@ -1,0 +1,24 @@
+Programming for OTs
+
+Operating Systems
+
+
+Windows
+Settings
+
+Doing more than settings..
+VBA
+Windows Host Scripting
+Regedit files
+Autohotkey
+
+
+nomousey http://www.autohotkey.com/forum/topic2197.html
+uirt http://www.autohotkey.com/forum/topic67843.html
+debouncer http://www.autohotkey.com/forum/topic55867.html
+clip mouse to window http://www.autohotkey.com/forum/topic66523.html
+frogpad http://www.autohotkey.com/forum/topic64003.html
+onehanded http://jabobian.blog.com/
+http://www.autohotkey.com/docs/scripts/index.htm
+
+for linux: http://www.ironahk.net/
