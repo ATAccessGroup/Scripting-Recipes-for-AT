@@ -15,12 +15,14 @@
 ;   F7 or ctrl-shift p : Play / Pause toggle
 ;   F6 or Ctrl-Shift ] : Next
 ;   F5 or Ctrl-Shift [ : Previous
-;   F4 or Ctrl-Shift f : Play (not toggle)
-;   F3 or Ctrl-Shift s : Stop (not toggle)
+;   F4 or Ctrl-Shift s : Stop (not toggle)
+;   F3 or Ctrl-Shift f : Play (not toggle)
 ;   Ctrl-Shift - : Vol down
 ;   Ctrl-Shift = : Vol up
 
-DelayTimeMS := 5000
+#SingleInstance force
+
+DelayTimeMS := 8000
 DelayTimeSec := DelayTimeMS / 1000
 varPlaying := false
 
@@ -30,22 +32,31 @@ Simple Music Latch and Timed player.
 http://code.willwa.de
 
 1. Configure switch box to F8 (timed) or F7 (latched) or F4/F3 (2-switch)
-2. Open and select music in either iTunes or Windows Media Player (not both)
+2. Open and select music in either iTunes or Windows Media Player (not both). You may need to press play then pause to get things started correctly.
 
 Usage:
+    F8 or ctrl-shift t : Play music for timed period (default 8 secs)
     Ctrl-Shift c : Config window to set the time
     Ctrl-Shift d : View the time period set
-    F8 or ctrl-shift t : Play music for timed period
+
+    F3 or Ctrl-Shift f : Play (not toggle)
+    F4 or Ctrl-Shift s : Stop (not toggle)
+
     F7 or ctrl-shift p : Play / Pause toggle
     F6 or Ctrl-Shift ] : Next
     F5 or Ctrl-Shift [ : Previous
-    F4 or Ctrl-Shift f : Play (not toggle)
-    F3 or Ctrl-Shift s : Stop (not toggle)
+
     Ctrl-Shift - : Vol down
     Ctrl-Shift = : Vol up
+
+    Ctrl-Shift h : This help box
 )
 
 MsgBox, %HelloText%
+
+^+h::
+    MsgBox, %HelloText%
+return
 
 ^+c::
     Gui, Add, Text,, Delay Time (seconds):
@@ -90,7 +101,7 @@ F7::
     }
 return
 
-F4::
+F3::
 ^+f::
    if(!varPlaying) {
        DetectHiddenWindows,On
@@ -100,7 +111,7 @@ F4::
     }     
 return
 
-F3::
+F4::
 ^+s::
    if(varPlaying) {
        DetectHiddenWindows,On
