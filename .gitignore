@@ -1,6 +1,11 @@
 # Build and Object Folders
 bin/
 obj/
+*.zip
+*.exe
+
+#MarkdownPreviews
+*.pdf
 
 #User Specific Files
 *.user
@@ -9,3 +14,4 @@ obj/
 #Resource Caches
 _ReSharper.*
 *.sln.cache
+
