@@ -1,4 +1,4 @@
-#Music Player/Shorcutter#
+#Music Player/Shortcutter#
 
 ![](https://github.com/willwade/ScriptsForOTs/raw/master/Autohotkey/MusicSwitcher/switchMusicThumb.png)
 
