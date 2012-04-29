@@ -8,7 +8,7 @@ This is a little Windows system tray app to develop/assess switch skills with mu
 
 ##To use:##
 
-1. Download it [here](http://wllw.de/MusicSwitcher). Unzip it. Feel free to run it from your desktop or wherever - even a USB stick will do.
+1. Download it [here](http://wllw.de/IAqiAC). Unzip it. Feel free to run it from your desktop or wherever - even a USB stick will do.
 2. Get your music ready in iTunes or Windows Media Player. Open one of those apps. Don’t have both running. (NB: It doesn’t need to be in the foreground so you can do other things with other switches if needed)
 3. Configure your switch driver software (e.g. [this](http://www.sensorysoftware.com/switchdriver.html))  to convert the correct switch presses to the correct keys:
 
@@ -44,7 +44,7 @@ This is a little Windows system tray app to develop/assess switch skills with mu
 
 ###Developer Notes###
 
-The code is written rather quickly in [AutoHotKey](http://www.autohotkey.com/) by [will wade](http://willwa.de) you can take a look at the [source code here](https://github.com/willwade/ScriptsForOTs/blob/master/Autohotkey/MusicSwitcher/MusicSwitcher.ahk) and you are more than welcome to fork the code and adapt for your own needs. (with thanks to [this thread](http://www.autohotkey.com/community/viewtopic.php?t=23267))
+The code is written rather quickly in [AutoHotKey](http://www.autohotkey.com/) by [will wade](http://willwa.de) you can take a look at the [source code here](https://github.com/willwade/Scripting-Recipes-for-AT/tree/master/Autohotkey/MusicSwitcher) and you are more than welcome to fork the code and adapt for your own needs. (with thanks to [this thread](http://www.autohotkey.com/community/viewtopic.php?t=23267))
 
 There are some other scripts available on GitHub in this sub-project; Notably Play and Stop Windows Media Player. These were hacked together by Marcus Friday. 
 
