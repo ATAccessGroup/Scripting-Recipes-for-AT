@@ -19,7 +19,10 @@ This is a little Windows system tray app to develop/assess switch skills with mu
 - *Two switch Play/Stop* Configure Play switch to F3 and Stop switch to F4
 - *Two switch Play/Next* Configure Play switch to F3 and Next switch F6
 
-NB: It will stop any previous use of F keys whilst running. Just Right click on the taskbar icon to exit the application.
+###Caveats:###
+
+- It will stop any previous use of F keys whilst running. Just right click on the taskbar icon to exit the application.
+- If WMP or iTunes is already playing when you make the first switch hit, or you manually hit press/play after the first hit is made then you may find everything gets reversed! (i.e. Play becomes Stop!). 
 
 ###The full shortcuts are:###
 
