@@ -1,5 +1,11 @@
 Programming for OTs
 
+Scripting is another tool. Its just another hand rail or toilet seat. 
+
+Although you don't need to know everything it may be useful to make the few odd hacks
+
+Here is a dummies guide on how to script and hack a computer to solve some common AT problems and provide other ideas..
+
 Operating Systems
 
 
