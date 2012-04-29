@@ -8,7 +8,7 @@ This is a little Windows system tray app to develop/assess switch skills with mu
 
 ##To use:##
 
-1. Download it [here](http://wllw.de/MusicShortcutter). Unzip it. Feel free to run it from your desktop or wherever - even a USB stick will do.
+1. Download it [here](http://wllw.de/MusicSwitcher). Unzip it. Feel free to run it from your desktop or wherever - even a USB stick will do.
 2. Get your music ready in iTunes or Windows Media Player. Open one of those apps. Don’t have both running. (NB: It doesn’t need to be in the foreground so you can do other things with other switches if needed)
 3. Configure your switch driver software (e.g. [this](http://www.sensorysoftware.com/switchdriver.html))  to convert the correct switch presses to the correct keys:
 
