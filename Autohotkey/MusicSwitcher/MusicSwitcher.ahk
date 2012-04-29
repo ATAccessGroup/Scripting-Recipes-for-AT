@@ -25,6 +25,7 @@
 DelayTimeMS := 8000
 DelayTimeSec := DelayTimeMS / 1000
 varPlaying := false
+varHits := 0
 
 HelloText =
 (
@@ -58,6 +59,10 @@ MsgBox, %HelloText%
     MsgBox, %HelloText%
 return
 
+^+v::
+    MsgBox, %varHits%
+return
+
 ^+c::
     Gui, Add, Text,, Delay Time (seconds):
     Gui, Add, Slider, vDelayTimeSec Vertical ToolTip, %DelayTimeSec%
@@ -87,6 +92,7 @@ F8::
    ControlSend, ahk_parent, {space}, iTunes ahk_class iTunes 
    PostMessage,   0x111, 32808, 0,, ahk_class WMPlayerApp
    varPlaying := false
+   varHits := varHits + 1
 return
 
 F7::
@@ -99,6 +105,7 @@ F7::
    } else {
        varPlaying := true
     }
+   varHits := varHits + 1
 return
 
 F3::
@@ -108,7 +115,8 @@ F3::
        ControlSend, ahk_parent, {space}, iTunes ahk_class iTunes 
        PostMessage,   0x111, 32808, 0,, ahk_class WMPlayerApp
        varPlaying = true
-    }     
+    }
+   varHits := varHits + 1
 return
 
 F4::
@@ -119,6 +127,7 @@ F4::
        PostMessage,   0x111, 32808, 0,, ahk_class WMPlayerApp
        varPlaying := false
        }
+   varHits := varHits + 1
 return
 
 
@@ -127,6 +136,7 @@ F5::
    DetectHiddenWindows,On
    ControlSend, ahk_parent, ^{left}, iTunes ahk_class iTunes
    PostMessage,   0x111, 32810, 0,, ahk_class WMPlayerApp
+   varHits := varHits + 1
 return
 
 F6::
@@ -134,16 +144,19 @@ F6::
    DetectHiddenWindows,On
    ControlSend, ahk_parent, ^{right}, iTunes ahk_class iTunes
    PostMessage,   0x111, 32811, 0,, ahk_class WMPlayerApp
+   varHits := varHits + 1
 return
 
 ^+=::
    DetectHiddenWindows,On
    ControlSend, ahk_parent, ^{up}, iTunes ahk_class iTunes
    PostMessage,   0x111, 32815, 0,, ahk_class WMPlayerApp
+   varHits := varHits + 1
 return
 
 ^+-::
    DetectHiddenWindows,On
    ControlSend, ahk_parent, ^{down}, iTunes ahk_class iTunes
    PostMessage,   0x111, 32816, 0,, ahk_class WMPlayerApp
+   varHits := varHits + 1
 return  
