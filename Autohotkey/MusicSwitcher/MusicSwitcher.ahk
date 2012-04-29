@@ -33,7 +33,8 @@ Simple Music Latch and Timed player.
 http://code.willwa.de
 
 1. Configure switch box to F8 (timed) or F7 (latched) or F4/F3 (2-switch)
-2. Open and select music in either iTunes or Windows Media Player (not both). You may need to press play then pause to get things started correctly.
+2. Open and select music in either iTunes or Windows Media Player (not both). You may need to press play then pause to get things started correctly. 
+
 
 Usage:
     F8 or ctrl-shift t : Play music for timed period (default 8 secs)
