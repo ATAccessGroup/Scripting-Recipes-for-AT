@@ -11,12 +11,12 @@
 ; Controls
 ;   Ctrl-Shift c : Config window to set the time
 ;   Ctrl-Shift d : View the time period set
-;   F8 or ctrl-shift t : Play music for timed period
-;   F7 or ctrl-shift p : Play / Pause toggle
-;   F6 or Ctrl-Shift ] : Next
-;   F5 or Ctrl-Shift [ : Previous
-;   F4 or Ctrl-Shift s : Stop (not toggle)
-;   F3 or Ctrl-Shift f : Play (not toggle)
+;   F8 or 0 or ctrl-shift t : Play music for timed period
+;   F7 or 2 or ctrl-shift p : Play / Pause toggle
+;   F6 or 3 or Ctrl-Shift ] : Next
+;   F5 or 1 or Ctrl-Shift [ : Previous
+;   F4 or Down or Ctrl-Shift s : Stop (not toggle)
+;   F3 or Left or Ctrl-Shift f : Play (not toggle)
 ;   Ctrl-Shift - : Vol down
 ;   Ctrl-Shift = : Vol up
 
@@ -84,6 +84,7 @@ return
 return
 
 F8::
+0::
 ^+t::
    DetectHiddenWindows,On
    ControlSend, ahk_parent, {space}, iTunes ahk_class iTunes 
@@ -97,6 +98,7 @@ F8::
 return
 
 F7::
+2::
 ^+p::
    DetectHiddenWindows,On
    ControlSend, ahk_parent, {space}, iTunes ahk_class iTunes 
@@ -109,7 +111,7 @@ F7::
    varHits := varHits + 1
 return
 
-F3::
+Left::
 ^+f::
    if(!varPlaying) {
        DetectHiddenWindows,On
@@ -120,7 +122,7 @@ F3::
    varHits := varHits + 1
 return
 
-F4::
+Down::
 ^+s::
    if(varPlaying) {
        DetectHiddenWindows,On
@@ -133,6 +135,7 @@ return
 
 
 F5::
+3::
 ^+[::
    DetectHiddenWindows,On
    ControlSend, ahk_parent, ^{left}, iTunes ahk_class iTunes
@@ -141,6 +144,7 @@ F5::
 return
 
 F6::
+1::
 ^+]::
    DetectHiddenWindows,On
    ControlSend, ahk_parent, ^{right}, iTunes ahk_class iTunes
