@@ -37,16 +37,16 @@ http://code.willwa.de
 
 
 Usage:
-    F8 or ctrl-shift t : Play music for timed period (default 8 secs)
+    F8 or 0 or ctrl-shift t : Play music for timed period (default 8 secs)
     Ctrl-Shift c : Config window to set the time
     Ctrl-Shift d : View the time period set
 
-    F3 or Ctrl-Shift f : Play (not toggle)
-    F4 or Ctrl-Shift s : Stop (not toggle)
+    F3 or Left or Ctrl-Shift f : Play (not toggle)
+    F4 or Down or Ctrl-Shift s : Stop (not toggle)
 
-    F7 or ctrl-shift p : Play / Pause toggle
-    F6 or Ctrl-Shift ] : Next
-    F5 or Ctrl-Shift [ : Previous
+    F7 or 2 or ctrl-shift p : Play / Pause toggle
+    F6 or 3 or Ctrl-Shift ] : Next
+    F5 or 1 or Ctrl-Shift [ : Previous
 
     Ctrl-Shift - : Vol down
     Ctrl-Shift = : Vol up
