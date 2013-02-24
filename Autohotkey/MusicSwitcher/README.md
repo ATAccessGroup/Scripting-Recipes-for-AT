@@ -14,10 +14,10 @@ This is a little Windows system tray app to develop/assess switch skills with mu
 
 ##Some suggestions:##
 
-- *Timed play with 1 switch* Configure switch to F8. Configure time by pressing Control+Shift+C (Default time is 8 Seconds). If you want to check what time is set: Control+Shift d
-- *Latching with 1 switch* Configure switch to F7
-- *Two switch Play/Stop* Configure Play switch to F3 and Stop switch to F4
-- *Two switch Play/Next* Configure Play switch to F3 and Next switch F6
+- *Timed play with 1 switch* Configure switch to F8 or 0. Configure time by pressing Control+Shift+C (Default time is 8 Seconds). If you want to check what time is set: Control+Shift d
+- *Latching with 1 switch* Configure switch to F7 or 1
+- *Two switch Play/Stop* Configure Play switch to F3 or Left Arrow and Stop switch to F4 or Down Arrow
+- *Two switch Play/Next* Configure Play switch to F3 or Left Arrow and Next switch F6 or 3
 
 ###Caveats:###
 
