@@ -20,41 +20,54 @@
 ;   Ctrl-Shift - : Vol down
 ;   Ctrl-Shift = : Vol up
 
+
+; init
 #SingleInstance force
+#Persistent
+SetTitleMatchMode, 2
+DetectHiddenWindows, on
 
 DelayTimeMS := 8000
 DelayTimeSec := DelayTimeMS / 1000
 varPlaying := false
 varHits := 0
 
-HelloText =
-(
-Simple Music Latch and Timed player.
-http://code.willwa.de
-
-1. Configure switch box to F8 (timed) or F7 (latched) or F4/F3 (2-switch)
-2. Open and select music in either iTunes or Windows Media Player (not both). You may need to press play then pause to get things started correctly. 
+; Tray Menu functions. I hope people use this.
+menu, tray, add ; separator
+menu, tray, add, SetLatchedTime
+menu, tray, add, Help
 
 
-Usage:
-    F8 or 0 or ctrl-shift t : Play music for timed period (default 8 secs)
-    Ctrl-Shift c : Config window to set the time
-    Ctrl-Shift d : View the time period set
+; Main 
+Help:
+    HelloText =
+    (
+    Simple Music Latch and Timed player.
+    http://code.willwa.de
 
-    F3 or Left or Ctrl-Shift f : Play (not toggle)
-    F4 or Down or Ctrl-Shift s : Stop (not toggle)
+    1. Configure switch box to F8 (timed) or F7 (latched) or F4/F3 (2-switch)
+    2. Open and select music in either iTunes, VLC or Windows Media Player (don't have more than one of these running at the same time!). You may need to press play then pause to get things started correctly. 
 
-    F7 or 2 or ctrl-shift p : Play / Pause toggle
-    F6 or 3 or Ctrl-Shift ] : Next
-    F5 or 1 or Ctrl-Shift [ : Previous
 
-    Ctrl-Shift - : Vol down
-    Ctrl-Shift = : Vol up
+    Usage:
+        F8 or 0 or ctrl-shift t : Play music for timed period (default 8 secs)
+        Ctrl-Shift c : Config window to set the time
+        Ctrl-Shift d : View the time period set
 
-    Ctrl-Shift h : This help box
-)
+        F3 or Left or Ctrl-Shift f : Play (not toggle)
+        F4 or Down or Ctrl-Shift s : Stop (not toggle)
 
-MsgBox, %HelloText%
+        F7 or 2 or ctrl-shift p : Play / Pause toggle
+        F6 or 3 or Ctrl-Shift ] : Next
+        F5 or 1 or Ctrl-Shift [ : Previous
+
+        Ctrl-Shift - : Vol down
+        Ctrl-Shift = : Vol up
+
+        Ctrl-Shift h : This help box
+    )
+    MsgBox, %HelloText%
+return
 
 ^+h::
     MsgBox, %HelloText%
@@ -64,7 +77,8 @@ return
     MsgBox, %varHits%
 return
 
-^+c::
+
+SetLatchedTime:
     Gui, Add, Text,, Delay Time (seconds):
     Gui, Add, Slider, vDelayTimeSec Vertical ToolTip, %DelayTimeSec%
     Gui, Add, Button, default, OK
@@ -79,6 +93,10 @@ return
     Gui, Destroy
 return
 
+^+c::
+    gosub, SetLatchedTime
+return
+
 ^+d::
     MsgBox % "The value in the variable named DelayTimeSec is " . floor(DelayTimeSec) . "."  
 return
@@ -89,10 +107,12 @@ F8::
    DetectHiddenWindows,On
    ControlSend, ahk_parent, {space}, iTunes ahk_class iTunes 
    PostMessage,   0x111, 32808, 0,, ahk_class WMPlayerApp
+   ControlSend, , {space}, VLC media player
    varPlaying := true
    Sleep, DelayTimeMS
    ControlSend, ahk_parent, {space}, iTunes ahk_class iTunes 
    PostMessage,   0x111, 32808, 0,, ahk_class WMPlayerApp
+   ControlSend, , {space}, VLC media player
    varPlaying := false
    varHits := varHits + 1
 return
@@ -103,6 +123,7 @@ F7::
    DetectHiddenWindows,On
    ControlSend, ahk_parent, {space}, iTunes ahk_class iTunes 
    PostMessage,   0x111, 32808, 0,, ahk_class WMPlayerApp
+    ControlSend, , {space}, VLC media player
    if (varPlaying) {
       varPlaying := false 
    } else {
@@ -117,6 +138,7 @@ Left::
        DetectHiddenWindows,On
        ControlSend, ahk_parent, {space}, iTunes ahk_class iTunes 
        PostMessage,   0x111, 32808, 0,, ahk_class WMPlayerApp
+            ControlSend, , {space}, VLC media player
        varPlaying = true
     }
    varHits := varHits + 1
@@ -128,6 +150,7 @@ Down::
        DetectHiddenWindows,On
        ControlSend, ahk_parent, {space}, iTunes ahk_class iTunes 
        PostMessage,   0x111, 32808, 0,, ahk_class WMPlayerApp
+       ControlSend, , {space}, VLC media player
        varPlaying := false
        }
    varHits := varHits + 1
@@ -140,6 +163,7 @@ F5::
    DetectHiddenWindows,On
    ControlSend, ahk_parent, ^{left}, iTunes ahk_class iTunes
    PostMessage,   0x111, 32810, 0,, ahk_class WMPlayerApp
+    ControlSend, , {p}, VLC media player
    varHits := varHits + 1
 return
 
@@ -149,6 +173,7 @@ F6::
    DetectHiddenWindows,On
    ControlSend, ahk_parent, ^{right}, iTunes ahk_class iTunes
    PostMessage,   0x111, 32811, 0,, ahk_class WMPlayerApp
+  ControlSend, , {n}, VLC media player
    varHits := varHits + 1
 return
 
@@ -156,6 +181,7 @@ return
    DetectHiddenWindows,On
    ControlSend, ahk_parent, ^{up}, iTunes ahk_class iTunes
    PostMessage,   0x111, 32815, 0,, ahk_class WMPlayerApp
+    ControlSend,, ^{up}, VLC media player
    varHits := varHits + 1
 return
 
@@ -163,5 +189,6 @@ return
    DetectHiddenWindows,On
    ControlSend, ahk_parent, ^{down}, iTunes ahk_class iTunes
    PostMessage,   0x111, 32816, 0,, ahk_class WMPlayerApp
+    ControlSend,, ^{down}, VLC media player
    varHits := varHits + 1
 return  
