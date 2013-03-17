@@ -2,19 +2,31 @@
 
 ![](https://github.com/willwade/Scripting-Recipes-for-AT/raw/master/Autohotkey/MusicSwitcher/switchMusicThumb.png)
 
-This is a little Windows system tray app to develop/assess switch skills with music on a standard Windows computer. When assessing switch skills we often want to look a number of aspects; cause & effect, timed and two-switch. Playing music (along with a game such as Musical Statues) can be a great way to assess this. There are quite a few ways of doing this with the right equipment, for example a [powerlink](http://www.inclusive.co.uk/powerlink-4-uk-p2575) and tape player is the classic (reliable?!) way - or using one of the [iPod](http://www.inclusive.co.uk/ipod-switcher-p2554) [switching](http://www.inclusive.co.uk/hook-ipod-switch-access-p5960) boxes that suppliers now sell. However if you are out on an assessment and of these bits of kit is failing you or that mp3 file is stuck on a computer you can use this little tool. 
+This is a little Windows system tray app to develop/assess switch skills with music on a standard Windows computer. When assessing switch skills we often want to look a number of aspects; cause & effect, timed and two-switch control. Playing music (along with a game such as Musical Statues) can be a great way to assess this. There are quite a few ways of doing this with the right equipment, for example a [powerlink](http://www.inclusive.co.uk/powerlink-4-uk-p2575) and tape player is the classic (reliable?!) way - or using one of the [iPod](http://www.inclusive.co.uk/ipod-switcher-p2554) [switching](http://www.inclusive.co.uk/hook-ipod-switch-access-p5960) boxes that suppliers now sell. However if you are out on an assessment and of these bits of kit is failing you or that mp3 file is stuck on a computer you can use this little tool. 
+
+## So what does this do?? ##
+
+It is a small app that listens to certain keystrokes - or switch presses with the help of a switch box/switch driver software, to control standard Windows media playing applications such as [Windows Media Player](http://windows.microsoft.com/en-us/windows/download-windows-media-player), [iTunes](http://www.apple.com/itunes/) or [VLC](http://www.videolan.org/vlc/index.html).
+
+It runs in the background and can be accessed by right clicking the icon in the taskbar. Functions available to you in the taskbar:
+- Pause the script (useful if you want to use the F keys briefly)
+- Exit the script (close the program)
+- Show the help screen (useful if you forget which keys to set your switch box up for!)
+- And show latched time. 
  
-(For more information on developing switch skills take a look at [Ian Bean's free book available from Inclusive](http://www.inclusive.co.uk/articles/switch-progression-road-map) or the [documentation available at ACE North](http://www.ace-north.org.uk/pages/resources/documents/DevelopingSwitchingSkills.pdf) for starters) 
+![](https://github.com/willwade/Scripting-Recipes-for-AT/raw/master/Autohotkey/MusicSwitcher/readme-right-click-img.png)
+ 
+(For more information on developing switch skills take a look at [Ian Bean's free book available from Inclusive](http://www.inclusive.co.uk/articles/switch-progression-road-map) or the [documentation available at ACE Centre](http://acecentre.org.uk/Websites/aceoldham/images/InfoSheets/SwAssessmentFramework.pdf) for starters) 
 
 ##To use:##
 
 1. Download it [here](https://s3-eu-west-1.amazonaws.com/app-musicswitcher/MusicSwitchShortCutter.zip). Unzip it. Feel free to run it from your desktop or wherever - even a USB stick will do.
-2. Get your music ready in iTunes, Windows Media Player or VLC. Open one of those apps. Don’t have both running. (NB: It doesn’t need to be in the foreground so you can do other things with other switches if needed). Note too that this works with video equally as well as music files. 
+2. Get your music ready in iTunes, Windows Media Player or VLC. Open one of those apps. Don’t have both running. (NB: It doesn’t need to be in the foreground so you can do other things with other switches if needed). Note too that this works with video equally as well as music files.  Set-up a playlist of media files or just have one media file ready to be played. If you don't you may hear silence! 
 3. Configure your switch driver software (e.g. [this](http://www.sensorysoftware.com/switchdriver.html))  to convert the correct switch presses to the correct keys:
 
 ##Some suggestions:##
 
-- *Timed play with 1 switch* Configure switch to F8 or 0. Configure time by pressing Control+Shift+C (Default time is 8 Seconds). If you want to check what time is set: Control+Shift d
+- *Timed play with 1 switch* Configure switch to F8 or 0. Configure time by pressing Control+Shift+C (Default time is 8 Seconds) or right clicking on the icon in the taskbar and selecting "SetLatchedTime". If you want to check what time is set: Control+Shift d
 - *Latching with 1 switch* Configure switch to F7 or 1
 - *Two switch Play/Stop* Configure Play switch to F3 or Left Arrow and Stop switch to F4 or Down Arrow
 - *Two switch Play/Next* Configure Play switch to F3 or Left Arrow and Next switch F6 or 3
@@ -22,7 +34,8 @@ This is a little Windows system tray app to develop/assess switch skills with mu
 ###Caveats:###
 
 - It will stop any previous use of F keys whilst running. Just right click on the taskbar icon to exit the application.
-- If WMP or iTunes is already playing when you make the first switch hit, or you manually hit press/play after the first hit is made then you may find everything gets reversed! (i.e. Play becomes Stop!). 
+- If WMP/iTunes/VLC is already playing when you make the first switch hit, or you manually hit press/play after the first hit is made then you may find everything gets reversed! (i.e. Play becomes Stop!). 
+- Your switch driver software may already have a command set for W
 
 ###The full shortcuts are:###
 
