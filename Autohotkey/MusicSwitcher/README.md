@@ -21,15 +21,15 @@ It runs in the background and can be accessed by right clicking the icon in the 
 ##To use:##
 
 1. Download it [here](https://s3-eu-west-1.amazonaws.com/app-musicswitcher/MusicSwitchShortCutter.zip). Unzip it. Feel free to run it from your desktop or wherever - even a USB stick will do.
-2. Get your music ready in [Windows Media Player](http://windows.microsoft.com/en-us/windows/download-windows-media-player), [iTunes](http://www.apple.com/itunes/) or [VLC](http://www.videolan.org/vlc/index.html). Open one of those apps. Don’t have both running. (NB: It doesn’t need to be in the foreground so you can do other things with other switches if needed). Note too that this works with video equally as well as music files.  Set-up a playlist of media files or just have one media file ready to be played. If you don't you may hear silence! 
+2. Get your music ready in [Windows Media Player](http://windows.microsoft.com/en-us/windows/download-windows-media-player), [iTunes](http://www.apple.com/itunes/) or [VLC](http://www.videolan.org/vlc/index.html). Open one of those apps. Don’t have more than one of them     running. (NB: It doesn’t need to be in the foreground so you can do other things with other switches if needed). Note too that this works with video equally as well as music files.  Set-up a playlist of media files or just have one media file ready to be played. If you don't you may hear silence! 
 3. Configure your switch driver software (e.g. [this](http://www.sensorysoftware.com/switchdriver.html))  to convert the correct switch presses to the correct keys:
 
 ###Some suggestions:###
 
-    - *Timed play with 1 switch* Configure switch to F8 or 0. Configure time by pressing Control+Shift+C (Default time is 8 Seconds) or right clicking on the icon in the taskbar and selecting "SetLatchedTime". If you want to check what time is set: Control+Shift d
-    - *Latching with 1 switch* Configure switch to F7 or 1
-    - *Two switch Play/Stop* Configure Play switch to F3 or Left Arrow and Stop switch to F4 or Down Arrow
-    - *Two switch Play/Next* Configure Play switch to F3 or Left Arrow and Next switch F6 or 3
+- *Timed play with 1 switch* Configure switch to F8 or 0. Configure time by pressing Control+Shift+C (Default time is 8 Seconds) or right clicking on the icon in the taskbar and selecting "SetLatchedTime". If you want to check what time is set: Control+Shift d
+- *Latching with 1 switch* Configure switch to F7 or 1
+- *Two switch Play/Stop* Configure Play switch to F3 or Left Arrow and Stop switch to F4 or Down Arrow
+- *Two switch Play/Next* Configure Play switch to F3 or Left Arrow and Next switch F6 or 3
 
 ###The full shortcuts are:###
 
