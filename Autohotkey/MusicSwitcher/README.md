@@ -14,7 +14,7 @@ It runs in the background and can be accessed by right clicking the icon in the 
 - Show the help screen (useful if you forget which keys to set your switch box up for!)
 - And show latched time. 
  
-![](https://github.com/willwade/Scripting-Recipes-for-AT/raw/master/Autohotkey/MusicSwitcher/readme-right-click-img.png)
+![](https://raw.github.com/willwade/Scripting-Recipes-for-AT/master/Autohotkey/MusicSwitcher/readme-right-click-img.png)
  
 (For more information on developing switch skills take a look at [Ian Bean's free book available from Inclusive](http://www.inclusive.co.uk/articles/switch-progression-road-map) or the [documentation available at ACE Centre](http://acecentre.org.uk/Websites/aceoldham/images/InfoSheets/SwAssessmentFramework.pdf) for starters) 
 
