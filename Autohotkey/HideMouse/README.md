@@ -1,4 +1,4 @@
-MorseWriter
+HideMouse
 -----------
 
 Sometimes it may be useful to not have a mouse. This does that. 
