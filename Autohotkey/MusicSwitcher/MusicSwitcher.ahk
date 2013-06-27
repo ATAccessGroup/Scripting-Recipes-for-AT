@@ -158,7 +158,7 @@ return
 
 
 F5::
-3::
+1::
 ^+[::
    DetectHiddenWindows,On
    ControlSend, ahk_parent, ^{left}, iTunes ahk_class iTunes
@@ -168,7 +168,7 @@ F5::
 return
 
 F6::
-1::
+3::
 ^+]::
    DetectHiddenWindows,On
    ControlSend, ahk_parent, ^{right}, iTunes ahk_class iTunes
