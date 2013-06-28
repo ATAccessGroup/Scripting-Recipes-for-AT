@@ -18,7 +18,11 @@ It runs in the background and can be accessed by right clicking the icon in the 
 - Show the help screen (useful if you forget which keys to set your switch box up for!)
 - And set/show latched time. 
  
+![](https://github.com/willwade/Scripting-Recipes-for-AT/raw/master/Autohotkey/MusicSwitcher/switchMusicThumb.png)
+
 <iframe width="560" height="315" src="//www.youtube.com/embed/yw07nVB2mjU?rel=0" frameborder="0" allowfullscreen></iframe>
+
+[A video showing MusicSwitcher can be seen here](https://www.youtube.com/watch?v=yw07nVB2mjU)
 
 ##To use:##
 
