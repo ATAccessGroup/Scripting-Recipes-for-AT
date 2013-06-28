@@ -2,6 +2,8 @@
 
 ![](https://github.com/willwade/Scripting-Recipes-for-AT/raw/master/Autohotkey/MusicSwitcher/switchMusicThumb.png)
 
+<iframe width="560" height="315" src="//www.youtube.com/embed/yw07nVB2mjU?rel=0" frameborder="0" allowfullscreen></iframe>
+
 This is a little Windows system tray app to develop/assess switch skills with music on a standard Windows computer. When assessing switch skills we often want to look a number of aspects; cause & effect, timed and two-switch control. Playing music (along with a game such as Musical Statues) can be a great way to assess this. There are quite a few ways of doing this with the right equipment, for example a [powerlink](http://www.inclusive.co.uk/powerlink-4-uk-p2575) and tape player is the classic (reliable?!) way - or using one of the [iPod](http://www.inclusive.co.uk/ipod-switcher-p2554) [switching](http://www.inclusive.co.uk/hook-ipod-switch-access-p5960) boxes that suppliers now sell. However if you are out on an assessment and of these bits of kit is failing you or that mp3 file is stuck on a computer you can use this little tool. 
  
 (For more information on developing switch skills take a look at [Ian Bean's free book available from Inclusive](http://www.inclusive.co.uk/articles/switch-progression-road-map) or the [documentation available at ACE Centre](http://acecentre.org.uk/Websites/aceoldham/images/InfoSheets/SwAssessmentFramework.pdf) for starters) 
