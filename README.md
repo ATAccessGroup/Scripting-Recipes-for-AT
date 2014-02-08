@@ -7,7 +7,7 @@ Scripts are organised depending on the language/scripting tool used. Granted - w
 
 What follows is a kind of Index:
 
-##Autohotkey##
+###Autohotkey###
 - FilterMouseClicks. Filters the mouse presses. 
 - HideMouse. A little demonstration of hiding the mouse - potentially useful for eyegaze
 - KeyboardDebouncer. A useful debouncer script
@@ -18,17 +18,17 @@ What follows is a kind of Index:
 - OneSwitchTwoActions. Send two Keyboard actions with one switch (keyboard) press. 
 - SoundingKeyboardMouse. Plays a different sound for each keyboard press. 
 
-##Processing##
+###Processing###
 - circleArt. A little demo really - some of the eyegaze/cause and effect apps are easily created. 
 
-##Python##
+###Python###
 - SoundingKeyboardMouse.py - See above. 
 
-##VB/RegEdit##
+###VB/RegEdit###
 - FilterKeyScripts - Sets the filterkey times using a regedit script. 
 - ToggleProxy.vbs - Useful for schools with students taking their laptops between home and school. Switches the Web Proxy on/off. 
 
-##Credits##
+##Credits###
 - Marcus Friday
 - Simon Judge
 - Will Wade
