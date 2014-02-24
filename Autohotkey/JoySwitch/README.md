@@ -10,8 +10,8 @@ Some applications need/require a switch interface but are looking for a joystick
 1. Download and install [vJoy](sourceforge.net/projects/vjoystick/files/latest/download) (You don't need the "feeder application" when you install it)
 3. Download the [JoySwitch application](https://s3-eu-west-1.amazonaws.com/script-exes/JoySwitch.exe)
 4. Double Click! To exit the application right click on the little umbrella in your tool bar and click "exit"
-5. Map your switch box to 0 for your single switch (1,2 are second and third switches)
-
+5. Map your switch box to 0 for your single switch (1,2 are second and third switches if you should need them)
+6. Put it in your start-up items 
 
 ## If you want to edit this ##
 
