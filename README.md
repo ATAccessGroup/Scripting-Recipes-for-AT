@@ -8,6 +8,7 @@ Scripts are organised depending on the language/scripting tool used. Granted - w
 What follows is a kind of Index:
 
 ###Autohotkey###
+- JoySwitch. A way of emulating a joycable (a joystick interface) if you don't have one. 
 - FilterMouseClicks. Filters the mouse presses. 
 - HideMouse. A little demonstration of hiding the mouse - potentially useful for eyegaze
 - KeyboardDebouncer. A useful debouncer script
