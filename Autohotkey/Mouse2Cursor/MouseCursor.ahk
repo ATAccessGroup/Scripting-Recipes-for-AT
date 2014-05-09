@@ -7,11 +7,13 @@ TimeToPoll=10 ; ms - Time to Poll.
 
 Loop
 {
+/*
 IfWinNotActive, Notepad ; Thus we only ever use this behavior in Notepad
    {
    Sleep 500 ; Optional. I don't know if this has any positive effect on script performance.
    Continue
    }
+*/
 MouseGetPos, VarX1, VarY1
 Sleep TimeToPoll
 MouseGetPos, VarX2, VarY2
@@ -27,3 +29,6 @@ Send {Up}
 If(VarY<-SizeOfMovement)
 Send {Down}
 }
+return 
+
+Ins::ExitApp
