@@ -1,0 +1,68 @@
+<job><script language="VBScript">
+Option Explicit
+
+On Error Resume Next
+
+Dim objWMIService
+Dim objNetAdapter
+Dim strComputer
+Dim arrIPAddress
+Dim arrSubnetMask
+Dim arrGateway
+Dim colNetAdapters
+Dim errEnableStatic
+Dim errGateways
+Dim strInput
+Dim errFailed
+
+errFailed = 0
+
+Dim response = MsgBox("title", MsgBoxStyle.YesNo, "Hospital-DHCP switcher")
+
+If response = MsgBoxResult.Yes Then
+
+	strComputer = "."
+	Set objWMIService = GetObject("winmgmts:\\" & strComputer & "\root\cimv2")
+	Set colNetAdapters = objWMIService.ExecQuery("Select * from Win32_NetworkAdapterConfiguration where IPEnabled=TRUE")
+
+	For Each objNetAdapter in colNetAdapters
+	     errEnable = objNetAdapter.EnableDHCP()
+	     If Not errEnable = 0 Then
+	     	WScript.Echo "Setting DHCP Failed."
+		errFailed = 1
+	     End If
+	Next
+Else
+	strComputer = "."
+	arrIPAddress = Array("192.168.81.95")
+	arrSubnetMask = Array("255.255.255.0")
+	arrGateway = Array("192.168.81.1")
+
+	Set objWMIService = GetObject("winmgmts:\\" & strComputer & "\root\cimv2")
+	Set colNetAdapters = objWMIService.ExecQuery("Select * from Win32_NetworkAdapterConfiguration where IPEnabled=TRUE")
+
+	For Each objNetAdapter in colNetAdapters
+	     errEnableStatic = objNetAdapter.EnableStatic(arrIPAddress, arrSubnetMask)
+	     If Not errEnableStatic = 0 Then
+	     	WScript.Echo "Failure assigning IP/Subnet."
+		errFailed = 1
+	     End If
+
+	     errGateways = objNetAdapter.SetGateways(arrGateway)
+	     If Not errGateways = 0 Then
+	     	WScript.Echo "Failure assigning Gateway."
+		errFailed = 1
+	     End If
+
+	Next
+
+End If
+
+If errFailed = 0 Then
+
+	WScript.Echo "IP Settings Successfully Modified."
+
+End If
+
+WScript.Quit
+</script></job>
