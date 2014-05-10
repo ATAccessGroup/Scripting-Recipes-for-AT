@@ -75,7 +75,7 @@ Return
 Esc:: 
     SystemCursor(-1)
     Suspend
-
+Return
 
 SystemCursor(OnOff=1)   ; INIT = "I","Init"; OFF = 0,"Off"; TOGGLE = -1,"T","Toggle"; ON = others
 {
