@@ -1,6 +1,6 @@
-#JoySwitch#
+jjo#JoySwitch#
 
-Need a joycable interface for Tobii Communicator but don't have one? Then you need me!
+Need a joycable interface for Tobii Communicator but don't have one (/only have a keyboard emulator type switch box)? Then you need me!
 
 ## What does this do? ##
 Some applications need/require a switch interface but are looking for a joystick interface. Such applications include Tobii Communicator and using a switch to select for eyegaze. (Tobii Communicator can use a range of other switch actions for scanning but not eyegaze selection.)
@@ -19,6 +19,13 @@ Some applications need/require a switch interface but are looking for a joystick
 2. Download the [AHK vJoy Wrapper](https://github.com/evilC/AHK-Universal-Joystick-Remapper) - so and place the JoySwitch AHK file in the folder above the vJoyLib directory..
 3. Run or compile with the AHK compiler 
 
+## What if I want to do the opposite? E.g. convert joystick button to key press? ##
+
+You may want to do this on a Liberator/PRC device and use the switch ports for something other than their software. You can do this simply with a autohotkey script e.g
+
+``Joy5::Space``
+
+and make your autohotkey app run at startup
 
 ## With thanks to ##
 
